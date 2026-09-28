@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: antiquewhite;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+nav{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    background-color: black; 
+    color: white;
+    
+    
+}
+
+nav ul li{
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.brand img {
+    width: 44px !important;
+    height: 44px !important;
+    padding: 8px !important;
+}
+
+
+.brand {
+    align-items: center;
+    display: flex;
+    
+    font-weight: bold;
+    font-size: 20px;
+} 
+
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: aliceblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('bagraund_wallpaper.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bottom{
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    
+    background-color: aliceblue;
+}
+
+.pause {
+    color: black;
+}
+
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin-top: 32px;
+}
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: rgb(255, 252, 252);
+    
+    color: black;
+    margin: 12px 0;
+    justify-content:space-between;
+    align-items: center;
+    border-radius: 34px;
+
+    
+}
+
+.songItem img{
+    width: 45px;
+    margin: 0 23px;
+    border-radius: 32px;
+}
+
+.timestamp {
+    margin: 0 23px;
+    
+}
+
+.timestamp img{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    bottom: 1pc;
+}
+.songInfo img{
+    width: 55px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+    opacity: 1 !important;
+    transition: opacity 0.4s ease-in;
+    
+}
+
+
+
+
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 600px) {
+
+    /* Navbar */
+    nav ul {
+        height: 50px;
+    }
+
+    nav ul li {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .brand img {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 5px !important;
+    }
+
+
+    /* Main container */
+    .container {
+        width: calc(100% - 30px);
+        min-height: 70vh;
+        padding: 15px;
+        margin: 15px auto;
+        box-sizing: border-box;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /* Heading */
+    .songList {
+        width: 100%;
+    }
+
+    .songList h1 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+
+    /* Song list */
+    .songItem {
+        width: 100%;
+        height: 45px;
+        margin: 10px 0;
+    }
+
+    .songItem > img {
+        width: 32px;
+        height: 32px;
+        margin: 0 8px;
+    }
+
+    .songName {
+        font-size: 12px;
+    }
+
+
+    /* Time */
+    .timestamp {
+        font-size: 11px;
+        margin: 0 3px;
+        white-space: nowrap;
+    }
+
+    .timestamp img {
+        width: 28px;
+        height: 28px;
+        margin: 0 5px;
+    }
+
+
+    /* Bottom music player */
+    .bottom {
+        height: 120px;
+        width: 100%;
+    }
+
+    #myProgressBar {
+        width: 90%;
+    }
+
+
+    /* Bottom buttons */
+    .icons {
+        gap: 18px;
+        margin-top: 10px;
+    }
+
+    .icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* Current song information */
+    .songInfo {
+        left: 5%;
+        bottom: 5px;
+        font-size: 12px;
+    }
+
+    .songInfo img {
+        width: 35px;
+        height: 35px;
+    }
+}
